@@ -72,6 +72,12 @@ spicetify apply
 
 You can also find the option if you click the three dots (More options) when you're at your favorite artist's page.
 
+<div>
+  <img src='assets/menu.png' width=360>
+  <br>
+  <img src='assets/settings.png' width=360>
+</div>
+
 ## Settings
 
 - Click on your profile at the top-right corner and click "👤 All of Artist Settings"
