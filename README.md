@@ -95,7 +95,7 @@ Allows you to choose which tracks to add to your favorite artist's dedicated pla
 
 Automatically identify and remove duplicate tracks that suits your track prioritization setting.
 
-- **Dedupe tracks:** Whether you want to automatically remove duplicate tracks or not. [Default: **On**]
+- **Dedupe tracks:** Whether you want to automatically remove duplicate tracks or not. [Default: **Off**]
 - **Track priority:** Determines which tracks to prioritize when removing duplicates. [Default: **Prefer Album ver.**]
 
 ### ☰ Playlist
