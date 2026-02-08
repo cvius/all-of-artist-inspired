@@ -93,17 +93,17 @@ Allows you to choose which tracks to add to your favorite artist's dedicated pla
 
 Automatically identify and remove duplicate tracks that suits your track prioritization setting.
 
-- **Dedupe tracks:** Whether you want to automatically remove duplicate tracks or not.
-- **Track priority:** Determines which tracks to prioritize when removing duplicates.
+- **Dedupe tracks:** Whether you want to automatically remove duplicate tracks or not. [Default: **On**]
+- **Track priority:** Determines which tracks to prioritize when removing duplicates. [Default: **Prefer Album ver.**]
 
 ### ☰ Playlist
 
 Allows you to customize how tracks will appear at your playlist. 
 
-- **Sort order:** Determines the order of how tracks will be sorted inside the playlist.
-- **Limit per playlist:** Determines how many tracks each artist's playlist will have. It will automatically create another playlist when it hits the limit.
-- **Set custom cover:** Whether to automatically set the artist's profile picture as playlist cover.
-- **Make playlist public:** Whether to automatically set the playlist created as public or private playlist.
+- **Sort order:** Determines the order of how tracks will be sorted inside the playlist. [Default: **Newest to oldest**]
+- **Limit per playlist:** Determines how many tracks each artist's playlist will have. It will automatically create another playlist when it hits the limit. [Default: **10,000**]
+- **Set custom cover:** Whether to automatically set the artist's profile picture as playlist cover. [Default: **On**]
+- **Make playlist public:** Whether to automatically set the playlist created as public or private playlist. [Default: **Off**]
 
 
 ## FAQ
