@@ -109,7 +109,7 @@ Allows you to customize the creation of your favorite artist's playlist.
 
 <div><img src='assets/settings.png' width=360></div>
 
-## FAQ
+## FAQs
 - "Are you going to add more sort order?"
 
 **No.**
@@ -122,5 +122,13 @@ Allows you to customize the creation of your favorite artist's playlist.
 
 This extension uses [`canonical_uri`](https://en.wikipedia.org/wiki/Canonicalization) instead of [ISRC IDs](https://en.wikipedia.org/wiki/International_Standard_Recording_Code) to ensure duplicate identification as some tracks do not have ISRCs. It groups matching tracks together and selects the one that best fits your preferences.
 
+## Acknowledgements
+
+This extension was inspired by and built with the help of ideas and code from several extensions:
+
+- [**allOfArtist**](https://github.com/pl4neta/allOfArtist) by pl4neta — for edge cases that inspired improvements.
+- [**sort-play**](https://github.com/hoeci/sort-play) by hoeci — for custom cover implementation.
+- [**shuffle+**](https://spicetify.app/docs/customization/extensions/#shuffle) by khanhas and Tetrax-10 — for the settings structure and styling. 
+ 
 ---
-This is my first extension. If you find this extension useful, consider giving it a star ⭐️. Thank you!
+If you find this extension useful, consider giving it a star ⭐️. Thank you!
