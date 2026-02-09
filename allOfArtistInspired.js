@@ -17,7 +17,7 @@
 		includeUnplayable: false,
 		dedupePlaylist: false,
 		dedupePriority: "priority-album", // album | single | oldest | newest
-		sortOrder: "newest-oldest", // newest-oldest | oldest-newest
+		sortOrder: "newest-oldest", // newest-oldest | oldest-newest | most-played | least-played
 		playlistLimit: 10000, // 100 | 1000 | 2000 | 5000 | 10000
 		setCustomCover: true,
 		isPublicPlaylist: false,
@@ -248,6 +248,8 @@
 					options: [
 						{ value: "newest-oldest", label: "Newest to Oldest" },
 						{ value: "oldest-newest", label: "Oldest to Newest" },
+						{ value: "most-played", label: "Most Played First" },
+						{ value: "least-played", label: "Least Played First" },
 					],
 				}),
 				React.createElement(dropdownButton, {
@@ -641,6 +643,9 @@
 		tracks = await deduplicateTracksIfNeeded(tracks);
 
 		tracks.sort((a, b) => {
+			if (CONFIG.sortOrder === "most-played") return b.playCount - a.playCount;
+			if (CONFIG.sortOrder === "least-played") return a.playCount - b.playCount;
+
 			const dateA = formattedDate(a.album.releaseDate);
 			const dateB = formattedDate(b.album.releaseDate);
 
@@ -828,6 +833,7 @@
 						console.warn("Cover upload failed, continuing without custom cover.", e);
 					}
 				}
+
 				for (let j = 0; j < batchTracks.length; j += TRACKS_BATCH_SIZE) {
 					await Spicetify.Platform.PlaylistAPI.add(
 						playlistUri,
