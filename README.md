@@ -24,7 +24,7 @@ Your playlist, your preference.
 4.  Reload the Spotify. Done!
 
 ### 2. Manual Installation
-Copy `allOfArtistInspired.js` into your [Spicetify](https://github.com/spicetify/spicetify-cli) extensions directory:
+Copy `allOfArtistLoader.mjs` into your [Spicetify](https://github.com/spicetify/spicetify-cli) extensions directory:
 
 | **Platform** | **Path**                                                                             |
 | ------------ | ------------------------------------------------------------------------------------ |
@@ -35,7 +35,7 @@ Copy `allOfArtistInspired.js` into your [Spicetify](https://github.com/spicetify
 After putting the extension file into the correct folder, run the following command to install the extension:
 
 ```bash
-spicetify config extensions allOfArtistInspired.js
+spicetify config extensions allOfArtistLoader.mjs
 spicetify apply
 ```
 
@@ -45,7 +45,7 @@ Example:
 ```ini
 [AdditionalOptions]
 ...
-extensions = autoSkipExplicit.js|shuffle+.js|trashbin.js|allOfArtistInspired.js
+extensions = autoSkipExplicit.js|shuffle+.js|trashbin.js|allOfArtistLoader.mjs
 ```
 
 Then run:
@@ -59,7 +59,7 @@ spicetify apply
 Run the following command to uninstall the extension (note the - on the end):
 
 ```bash
-spicetify config extensions allOfArtistInspired.js-
+spicetify config extensions allOfArtistLoader.mjs-
 spicetify apply
 ```
 
