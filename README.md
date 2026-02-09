@@ -4,12 +4,16 @@ Create a complete playlist of your favorite artist’s discography — curated a
 
 Your playlist, your preference.
 
+> [!NOTE]
+> If you find this extension useful, consider giving it a star ⭐️. Thank you!
+
 ## Requirements
 
 - **Spotify:** 1.2.79 or higher (recommended) 
 - **Spicetify:** Latest
 
-> I haven't tested it on lower versions. If it doesn’t work there, I won’t be able to provide support. Sorry 😅
+> [!WARNING]
+> I haven't tested it on lower versions of Spotify. If it doesn’t work there, I won’t be able to provide support. Sorry 😅
 
 ## Installation
 
@@ -116,7 +120,7 @@ Allows you to customize the creation of your favorite artist's playlist.
 
 - "There are X tracks added even tho I set Y to Z."
 
-**Blame Spotify.** This extension relies solely on Spotify’s metadata, which I do not control. If you're experiencing an issue, please open one so I can reproduce it — include detailed steps, links, and console errors if possible.
+**Blame Spotify.** This extension relies solely on Spotify’s metadata, which this extension does not control. If you're experiencing an issue, please open one so I can reproduce it — include detailed steps, links, and console errors if possible.
 
 - "How does deduplication works?"
 
@@ -129,6 +133,3 @@ This extension was inspired by and built with the help of ideas and code from se
 - [**allOfArtist**](https://github.com/pl4neta/allOfArtist) by pl4neta — for edge cases that inspired improvements.
 - [**sort-play**](https://github.com/hoeci/sort-play) by hoeci — for custom cover implementation.
 - [**shuffle+**](https://spicetify.app/docs/customization/extensions/#shuffle) by khanhas and Tetrax-10 — for the settings structure and styling. 
- 
----
-If you find this extension useful, consider giving it a star ⭐️. Thank you!
