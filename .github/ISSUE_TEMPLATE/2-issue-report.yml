@@ -1,0 +1,50 @@
+name: 🐞 Issue report
+description: Report an issue in this extension
+labels: [bug]
+body:
+  - type: textarea
+    id: expected-behavior
+    attributes:
+      label: Expected behavior
+      description: Explain what you should expect to happen. Provide an example of the issue.
+      placeholder: |
+        Example:
+          "This should happen..."
+    validations:
+      required: true
+
+  - type: textarea
+    id: actual-behavior
+    attributes:
+      label: Actual behavior
+      description: Explain what actually happens.
+      placeholder: |
+        Example:
+          "This happened instead..."
+    validations:
+      required: true
+
+  - type: textarea
+    id: console-logs
+    attributes:
+      label: Console logs
+      description: |
+        To check the console, run `spicetify enable-devtools` in the terminal. At the top-left corner, click the three dots, find `Develop` and go to `Console` tab.
+      placeholder: |
+        You can paste the console logs in plain text if needed.
+
+  - type: textarea
+    id: version-info
+    attributes:
+      label: Spotify and Spicetify version
+      description: |
+        At the top-left corner, click the three dots, find `About Spotify` under `Help`, and paste the version info here.
+    validations:
+      required: true
+
+  - type: textarea
+    id: other-details
+    attributes:
+      label: Other details
+      description: |
+        Additional details and attachments.
