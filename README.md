@@ -140,6 +140,6 @@ This extension uses [`canonical_uri`](https://en.wikipedia.org/wiki/Canonicaliza
 
 This extension was inspired by and built with the help of ideas and code from several extensions:
 
-- [**allOfArtist**](https://github.com/pl4neta/allOfArtist) by pl4neta — for edge cases that inspired improvements.
-- [**sort-play**](https://github.com/hoeci/sort-play) by hoeci — for custom cover implementation.
-- [**shuffle+**](https://spicetify.app/docs/customization/extensions/#shuffle) by khanhas and Tetrax-10 — for the settings structure and styling. 
+- [**allOfArtist**](https://github.com/pl4neta/allOfArtist) by pl4neta
+- [**sort-play**](https://github.com/hoeci/sort-play) by hoeci
+- [**shuffle+**](https://spicetify.app/docs/customization/extensions/#shuffle) by khanhas and Tetrax-10 
