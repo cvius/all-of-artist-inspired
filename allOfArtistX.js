@@ -693,44 +693,20 @@
 	}
 
 	async function setPlaylistCover(playlistUri, b64Img) {
-		const bufferToHex = (buffer) =>
-			Array.from(new Uint8Array(buffer))
-				.map((b) => b.toString(16).padStart(2, "0"))
-				.join("");
-
 		const getFileFromBase64 = async (b64) => {
 			const res = await fetch(b64);
 			const blob = await res.blob();
 			return new File([blob], "cover.jpg", { type: "image/jpeg" });
 		};
-
 		const file = await getFileFromBase64(b64Img);
-		const sessionToken = Spicetify.Platform.Session.accessToken;
 
-		const maxRetries = 5
+		const maxRetries = 5;
 		for (let attempt = 1; attempt <= maxRetries; attempt++) {
 			try {
 				const uploadToken = await Spicetify.Platform.PlaylistAPI.uploadImage(file);
 				if (!uploadToken) throw "No upload token returned.";
-
-				const regRes = await fetch(
-					`https://spclient.wg.spotify.com/playlist/v2/playlist/${playlistUri.split(":")[2]}/register-image`,
-					{
-						method: "POST",
-						headers: {
-							Authorization: `Bearer ${sessionToken}`,
-							"Content-Type": "application/json",
-						},
-						body: JSON.stringify({ uploadToken }),
-					}
-				);
-
-				if (!regRes.ok) throw `Registration failed: ${regRes.status}`;
-
-				const buffer = await regRes.arrayBuffer();
-				const hexBuffer = bufferToHex(buffer);
-
-				await Spicetify.Platform.PlaylistAPI.setAttributes(playlistUri, { picture: hexBuffer.slice(4) });
+				
+				await Spicetify.Platform.PlaylistAPI.updateDetails(playlistUri, { imageUploadToken: uploadToken });
 
 				if (typeof Spicetify.Platform.PlaylistAPI.resync === "function") {
 					await Spicetify.Platform.PlaylistAPI.resync(playlistUri);
