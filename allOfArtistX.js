@@ -277,13 +277,13 @@
 		};
 
 		Spicetify.PopupModal.display({
-			title: "All Of Artist Settings",
+			title: "All Of Artist X Settings",
 			content: React.createElement(settingsDOMContent),
 		});
 	}
 
 	new Spicetify.Menu.Item(
-		"All Of Artist Settings",
+		"All Of Artist X Settings",
 		false,
 		openSettings,
 		"artist",
