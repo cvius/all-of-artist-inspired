@@ -666,10 +666,18 @@
 	}
 
 	async function fetchArtistInfo(artistId) {
-		const { errors, data } = await Spicetify.GraphQL.Request(
-			Spicetify.GraphQL.Definitions.queryArtistOverview,
-			{ uri: `spotify:artist:${artistId}` },
-		);
+		// Definitions from older Spotify version from shuffle+.js
+		const queryArtistOverview = {
+			name: "queryArtistOverview",
+			operation: "query",
+			sha256Hash: "35648a112beb1794e39ab931365f6ae4a8d45e65396d641eeda94e4003d41497",
+			value: null,
+		};
+		const { errors, data } = await Spicetify.GraphQL.Request(queryArtistOverview, {
+			uri: `spotify:artist:${artistId}`,
+			locale: Spicetify.Locale.getLocale(),
+			includePrerelease: false,
+		});
 		if (errors) throw `queryArtistOverview: ${errors[0].message}`;
 
 		const name = data.artistUnion.profile.name;
