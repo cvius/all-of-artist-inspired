@@ -4,6 +4,8 @@ Create a complete playlist of your favorite artist’s discography — curated a
 
 Your playlist, your preference.
 
+<div><img src='preview.gif' width=1920></div>
+
 > If you find this extension useful, consider giving it a star ⭐️. Thank you!
 
 ## Requirements
